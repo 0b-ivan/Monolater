@@ -1,15 +1,25 @@
 {
-  "name": "monolater",
-  "version": "1.0.0",
-  "description": "Ein Monolitishcer Taschenrechner Service mit API Ansatz und REST-aenlicher Struktur mitder faeigkeit für primitive rechenoperationonen  ",
+  "name": "microlater",
+  "version": "1.0.1",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "nodemon": "^3.0.1"
-  }
+    "concurrently": "^8.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "apigateway": "cd apigateway && npm install && npm start",
+    "add": "cd add && npm install && npm start",
+    "divide": "cd divide && npm install && npm start",
+    "multiply": "cd multiply && npm install && npm start",
+    "sub": "cd sub && npm install && npm start",
+    "pow": "cd pow && npm install && npm start",
+
+    "start": "concurrently \"npm run add\" \"npm run apigateway\" \"npm run divide\" \"npm run multiply\" \"npm run sub\" \"npm run pow\""
+  } ,
+  "author": "",
+  "license": "ISC"
 }
