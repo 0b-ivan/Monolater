@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  apigateway:
+    image: monolater_apigateway
+    build: ./apigateway
+    container_name: monolater_apigateway
+    ports:
+      - 80:3000
+    depends_on:
+      - add
+    networks:
+      - monolater
+        
+  
+    
+  add:
+    build: ./add
+    container_name: monolater_add
+    networks:
+      - monolater
+
+networks:
+  monolater:
+    name: monolater
+      

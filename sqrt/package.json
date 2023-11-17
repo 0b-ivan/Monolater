@@ -4,7 +4,8 @@
   "description": "Ein Monolitishcer Taschenrechner Service mit API Ansatz und REST-aenlicher Struktur mitder faeigkeit für primitive rechenoperationonen  ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
